@@ -37,3 +37,4 @@ vim.schedule(function()
 end)
 
 vim.o.termguicolors = true
+vim.o.conceallevel = 1

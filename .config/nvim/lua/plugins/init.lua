@@ -22,16 +22,32 @@ return {
       end,
   },
 
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+    "epwalsh/obsidian.nvim",
+    version = "*",  -- recommended, use latest release instead of latest commit
+    lazy = true,
+    ft = "markdown",
+    dependencies = {
+      -- Required.
+      "nvim-lua/plenary.nvim",
+    },
+    keys = {
+      {"<cmd>ObsidianToday<cr>"}
+    },
+    opts = {
+      workspaces = {
+        {
+          name = "personal",
+          path = "/mnt/data/OneDrive/Documents/Obsidian Vault",
+        },
+      },
+      daily_notes = {
+        folder = "Daily Notes",
+        template = "Daily Note"
+      },
+      templates = {
+        folder = "Templates"
+      }
+    },
+  }
 }
