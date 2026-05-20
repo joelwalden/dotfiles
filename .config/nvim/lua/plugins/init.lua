@@ -31,8 +31,8 @@ return {
       -- Required.
       "nvim-lua/plenary.nvim",
     },
-    keys = {
-      {"<cmd>ObsidianToday<cr>"}
+    cmd = {
+      "ObsidianToday"
     },
     opts = {
       workspaces = {
