@@ -1,1 +1,0 @@
-/home/joel/dotfiles/.config/fish/conf.d
